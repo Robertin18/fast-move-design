@@ -32,7 +32,7 @@ export function CareSection() {
 }
 export function Process() {
   const steps = [{ title: 'Conte-nos o que precisa', text: 'Indique os locais, a data pretendida e o tipo de mudança.' }, { title: 'Receba o seu orçamento', text: 'Analisamos as informações e apresentamos uma proposta ajustada ao serviço solicitado.' }, { title: 'Prepare-se para mudar', text: 'Depois de confirmar os detalhes e o agendamento, organizamos o serviço consigo.' }];
-  return <section className="section-space"><div className="container-shell"><div className="process-heading"><p className="eyebrow">Simples, do início ao fim</p><h2>A SUA MUDANÇA EM 3 PASSOS.</h2></div><ol className="process-grid" style={{ listStyle: 'none', padding: 0, margin: 0 }}>{steps.map((step,i) => <li className="process-step" key={step.title}><div className="process-number"><span>0{i+1}</span></div><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></div></section>;
+  return <section className="section-space"><div className="container-shell"><div className="process-heading"><p className="eyebrow">Simples, do início ao fim</p><h2>A SUA MUDANÇA EM 3 PASSOS.</h2></div><ol className="process-grid">{steps.map((step,i) => <li className="process-step" key={step.title}><div className="process-number"><span>0{i+1}</span></div><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></div></section>;
 }
 export function Conversion() {
   const wa = whatsappUrl(`Olá, ${company.name}! Gostaria de pedir um orçamento para uma mudança.`);
