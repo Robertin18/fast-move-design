@@ -13,7 +13,7 @@ describe('Quotation preparation', () => {
     expect(quoteSchema.safeParse({ ...valid, service: 'Armazenamento' }).success).toBe(false);
     expect(quoteSchema.safeParse({ ...valid, description: 'a'.repeat(1501) }).success).toBe(false);
   });
-  it('does not generate a fictional WhatsApp contact', () => {
-    expect(whatsappUrl('Pedido de orçamento')).toBeNull();
+  it('opens WhatsApp with the confirmed contact number', () => {
+    expect(whatsappUrl('Pedido de orçamento')).toBe('https://wa.me/351926951040?text=Pedido%20de%20or%C3%A7amento');
   });
 });
