@@ -191,6 +191,7 @@
 .footer-column a,.footer-column p { font-size: 10px; color: var(--inverse-muted); line-height: 1.9; display: block; margin-bottom: 11px; }
 .footer-column a:hover { color: var(--primary); }
 .footer-column .footer-contact { color: var(--inverse); display: flex; width: fit-content; align-items: center; gap: 9px; }
+.footer-column .footer-contact svg { width: 14px; height: 14px; flex: none; }
 .footer-bottom { border-top: 1px solid var(--inverse-line); padding-block: 22px; display: flex; justify-content: space-between; gap: 20px; font-size: 9px; color: var(--inverse-muted); }
 .footer-bottom div { display: flex; gap: 24px; }
 .floating-whatsapp { position: fixed; bottom: 25px; right: 25px; z-index: 30; background: var(--primary); color: var(--primary-foreground); width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; box-shadow: var(--shadow-soft); transition: transform .2s; }
