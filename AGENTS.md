@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Use the existing TanStack Start router with React and TypeScript; the Lovable runtime does not support replacing it with Next.js.
+- Keep business contact settings in a single browser-safe configuration module and omit unconfirmed details to avoid fictitious contacts.
+- Share page sections across the home and dedicated content routes to keep copy and quotation interactions consistent.
+- Quotation requests are validated and prepared locally for WhatsApp, never posted to an unconfigured server.

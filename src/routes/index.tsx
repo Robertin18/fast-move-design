@@ -1,24 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
+import { createFileRoute } from '@tanstack/react-router';
+import { Hero, DifferenceBand, Services, CareSection, Process, Conversion } from '@/components/site/sections';
+import { QuoteForm } from '@/components/site/quote-form';
+import { pageHead } from '@/lib/page-meta';
+export const Route = createFileRoute('/')({
+  head: () => pageHead('Mudanças e transporte de móveis', 'A FAST MUDANÇA trata da sua mudança residencial, de apartamento ou escritório com organização e cuidado. Peça um orçamento ajustado às suas necessidades.', '/'),
   component: Index,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+function Index() { return <><Hero /><DifferenceBand /><Services /><CareSection /><Process /><Conversion /><QuoteForm /></>; }
