@@ -284,6 +284,7 @@
   .quote-intro .eyebrow { font-size: 9px; }
   .quote-detail { margin-top: 25px; }
   .quote-form { gap: 18px 12px; }
+  .quote-form .field:has(select) { grid-column: 1 / -1; }
   .field input,.field select,.field textarea { font-size: 16px; padding: 12px 10px; }
   .form-bottom { flex-direction: column-reverse; align-items: stretch; }
   .form-bottom p { max-width: none; text-align: center; }
