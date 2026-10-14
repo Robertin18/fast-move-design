@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowDown, ArrowUpRight, ShieldCheck, PackageCheck, CalendarDays, Users, ClipboardList } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, ShieldCheck, PackageCheck, CalendarDays, Users, ClipboardList, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { company, whatsappUrl } from '@/lib/company';
+import { company, mapsUrl, whatsappUrl } from '@/lib/company';
 import { WhatsAppIcon } from './brand';
 import heroImage from '@/assets/moving-hero.jpg';
 import residentialImage from '@/assets/residential.jpg';
