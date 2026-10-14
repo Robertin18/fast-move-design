@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowDown, ArrowUpRight, ShieldCheck, PackageCheck, CalendarDays, Users, ClipboardList } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, ShieldCheck, PackageCheck, CalendarDays, Users, ClipboardList, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { company, whatsappUrl } from '@/lib/company';
+import { company, mapsUrl, whatsappUrl } from '@/lib/company';
 import { WhatsAppIcon } from './brand';
 import heroImage from '@/assets/moving-hero.jpg';
 import residentialImage from '@/assets/residential.jpg';
@@ -40,4 +40,12 @@ export function Conversion() {
 }
 export function PageHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
   return <section className="page-top"><div className="container-shell reveal"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{description}</p></div></section>;
+}
+export function ContactPanel() {
+  const wa = whatsappUrl(`Olá, ${company.name}! Gostaria de pedir um orçamento.`);
+  return <section className="contact-panel" aria-label="Contactos FAST MUDANÇA"><div className="container-shell contact-grid">
+    {company.phone && <a className="contact-item" href={`tel:${company.phone.replace(/[\s()]/g, '')}`}><Phone /><div><strong>Telefone</strong><span>{company.phone}</span></div><ArrowUpRight className="contact-arrow" /></a>}
+    {wa && <a className="contact-item" href={wa} target="_blank" rel="noopener noreferrer"><WhatsAppIcon /><div><strong>WhatsApp</strong><span>Envie o seu pedido e fale connosco.</span></div><ArrowUpRight className="contact-arrow" /></a>}
+    {company.location && <a className="contact-item" href={mapsUrl} target="_blank" rel="noopener noreferrer"><MapPin /><div><strong>Localização</strong><span>{company.location}</span></div><ArrowUpRight className="contact-arrow" /></a>}
+  </div></section>;
 }

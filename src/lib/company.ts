@@ -3,13 +3,15 @@ import { z } from 'zod';
 // Populate only with details confirmed by the owner. Phone/WhatsApp: international digits, e.g. country code + number.
 export const company = {
   name: 'FAST MUDANÇA',
-  phone: '',
-  whatsapp: '',
+  phone: '+351 926 951 040',
+  whatsapp: '351926951040',
   email: '',
-  location: '',
+  location: 'Rua da Pandeirinha 38, 2845-244 Amora',
   serviceArea: '',
   social: [] as { label: string; url: string }[],
 };
+
+export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${company.name}, ${company.location}`)}`;
 
 export function whatsappUrl(message: string) {
   const number = company.whatsapp.replace(/[\s+()-]/g, '');
