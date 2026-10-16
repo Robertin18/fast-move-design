@@ -1,11 +1,68 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { PageHeading } from '@/components/site/sections';
-import { pageHead } from '@/lib/page-meta';
-import { company } from '@/lib/company';
-export const Route = createFileRoute('/privacidade')({
-  head: () => pageHead('Política de privacidade', 'Saiba como os dados do pedido de orçamento são utilizados no website da FAST MUDANÇA e como funciona a comunicação através do WhatsApp.', '/privacidade'),
+import { createFileRoute } from "@tanstack/react-router";
+import { PageHeading } from "@/components/site/sections";
+import { pageHead } from "@/lib/page-meta";
+import { company } from "@/lib/company";
+export const Route = createFileRoute("/privacidade")({
+  head: () =>
+    pageHead(
+      "Política de privacidade",
+      "Saiba como os dados do pedido de orçamento são utilizados no website da FAST MUDANÇA e como funciona a comunicação através do WhatsApp.",
+      "/privacidade",
+    ),
   component: PrivacyPage,
 });
 function PrivacyPage() {
-  return <><PageHeading eyebrow="FAST MUDANÇA · Privacidade" title="OS SEUS DADOS MERECEM CUIDADO." description="Informações sobre os dados introduzidos no formulário e a preparação de pedidos de orçamento." /><section className="section-space"><div className="container-shell privacy-content"><h2>Dados do pedido de orçamento</h2><p>O formulário solicita o nome, telefone, locais de origem e destino, tipo de serviço, data pretendida e, opcionalmente, uma descrição adicional. Estes dados destinam-se a preparar o seu pedido de orçamento.</p><h2>Como funciona o formulário</h2><p>Os dados são processados no seu navegador para gerar uma mensagem. Este website não envia o formulário para um servidor nem guarda os dados numa base de dados. Pode rever a mensagem antes de a copiar ou de abrir o WhatsApp. Evite incluir informação sensível na descrição.</p><h2>Comunicação pelo WhatsApp</h2><p>Quando optar por abrir o WhatsApp, os dados da mensagem são transmitidos a esse serviço. A mensagem apenas é enviada à FAST MUDANÇA quando confirmar o envio na conversa. A utilização do WhatsApp está sujeita à política de privacidade do respetivo serviço.</p><h2>Armazenamento e serviços externos</h2><p>O formulário não utiliza cookies nem armazenamento permanente para guardar os dados introduzidos. O alojamento do website pode processar dados técnicos necessários à disponibilização e segurança do serviço. As fontes são fornecidas pelo Google Fonts, que pode receber dados técnicos do navegador.</p><h2>Direitos e contacto</h2><p>Pode solicitar informações, retificação ou eliminação dos dados que enviar diretamente à FAST MUDANÇA através do mesmo canal utilizado no contacto.{company.email ? ` Pode também contactar-nos através de ${company.email}.` : ''}</p><h2>Antes da publicação</h2><p>O telefone, o WhatsApp e o endereço indicados neste website são os contactos oficiais da FAST MUDANÇA. A identificação legal do responsável pelo tratamento e os prazos de conservação das comunicações deverão ser completados antes da publicação do website.</p></div></section></>;
+  return (
+    <>
+      <PageHeading
+        eyebrow="FAST MUDANÇA · Privacidade"
+        title="OS SEUS DADOS MERECEM CUIDADO."
+        description="Informações sobre os dados introduzidos no formulário e a preparação de pedidos de orçamento."
+      />
+      <section className="section-space">
+        <div className="container-shell privacy-content">
+          <h2>Dados do pedido de orçamento</h2>
+          <p>
+            O formulário solicita o nome, telefone, locais de origem e destino, tipo de serviço,
+            data pretendida, dimensão aproximada da mudança, pisos e existência de elevadores. A
+            distância aproximada e a descrição adicional são opcionais. Estes dados destinam-se a
+            preparar o seu pedido de orçamento. Qualquer estimativa de preço e a data pretendida
+            estão sujeitas a confirmação pela empresa.
+          </p>
+          <h2>Como funciona o formulário</h2>
+          <p>
+            Os dados são processados no seu navegador para gerar uma mensagem. Este website não
+            envia o formulário para um servidor nem guarda os dados numa base de dados. Pode rever a
+            mensagem antes de a copiar ou de abrir o WhatsApp. Evite incluir informação sensível na
+            descrição.
+          </p>
+          <h2>Comunicação pelo WhatsApp</h2>
+          <p>
+            Quando optar por abrir o WhatsApp, os dados da mensagem são transmitidos a esse serviço.
+            A mensagem apenas é enviada à FAST MUDANÇA quando confirmar o envio na conversa. A
+            utilização do WhatsApp está sujeita à política de privacidade do respetivo serviço.
+          </p>
+          <h2>Armazenamento e serviços externos</h2>
+          <p>
+            O formulário não utiliza cookies nem armazenamento permanente para guardar os dados
+            introduzidos. O alojamento do website pode processar dados técnicos necessários à
+            disponibilização e segurança do serviço. As fontes são fornecidas pelo Google Fonts, que
+            pode receber dados técnicos do navegador.
+          </p>
+          <h2>Direitos e contacto</h2>
+          <p>
+            Pode solicitar informações, retificação ou eliminação dos dados que enviar diretamente à
+            FAST MUDANÇA através do mesmo canal utilizado no contacto.
+            {company.email ? ` Pode também contactar-nos através de ${company.email}.` : ""}
+          </p>
+          <h2>Antes da publicação</h2>
+          <p>
+            O telefone, o WhatsApp e o endereço indicados neste website são os contactos oficiais da
+            FAST MUDANÇA. A identificação legal do responsável pelo tratamento e os prazos de
+            conservação das comunicações deverão ser completados antes da publicação do website.
+          </p>
+        </div>
+      </section>
+    </>
+  );
 }
