@@ -13,3 +13,4 @@
 - Keep business contact settings in a single browser-safe configuration module and omit unconfirmed details to avoid fictitious contacts.
 - Share page sections across the home and dedicated content routes to keep copy and quotation interactions consistent.
 - Quotation requests are validated and prepared locally for WhatsApp, never posted to an unconfigured server.
+- Keep pricing configuration, input validation and pure estimation in a browser-safe pricing module; return a total only with complete applicable rates and inputs to prevent partial-price claims.

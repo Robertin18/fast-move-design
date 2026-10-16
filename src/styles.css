@@ -166,7 +166,16 @@
 .quote-detail div { display: grid; gap: 5px; }
 .quote-detail strong { font-size: 12px; }
 .quote-detail span { color: var(--muted-foreground); font-size: 11px; }
-.quote-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.quote-form { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; align-items: start; min-width: 0; }
+.quote-group-heading { grid-column: 1/-1; border-bottom: 1px solid var(--border); padding-bottom: 12px; font-size: 13px; font-weight: 700; }
+.field-hint { color: var(--muted-foreground); font-size: 11px; line-height: 1.6; }
+.quote-date-button { width: 100%; justify-content: flex-start; min-height: 46px; font-size: 12px; font-weight: 400; }
+.quote-price-note { grid-column: 1/-1; border-block: 1px solid var(--border); padding-block: 16px; }
+.quote-price-note strong { font-size: 12px; }
+.quote-price-note p { color: var(--muted-foreground); font-size: 12px; line-height: 1.8; margin-top: 8px; }
+.quote-result { min-width: 0; overflow-wrap: anywhere; }
+.quote-result-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.quote-result .estimate-total { margin-block: 12px; color: var(--foreground); }
 .field { display: grid; gap: 8px; min-width: 0; }
 .field label { font-size: 11px; font-weight: 650; }
 .field label span { color: var(--muted-foreground); font-weight: 400; }
@@ -301,7 +310,10 @@
   .quote-intro .eyebrow { font-size: 9px; }
   .quote-detail { margin-top: 25px; }
   .quote-form { gap: 18px 12px; }
-  .quote-form .field:has(select) { grid-column: 1 / -1; }
+  .quote-form { grid-template-columns: minmax(0,1fr); }
+  .quote-date-button { font-size: 16px; }
+  .quote-result-actions { flex-direction: column; }
+  .quote-form .brand-button { white-space: normal; height: auto; padding-block: 14px; }
   .field input,.field select,.field textarea { font-size: 16px; padding: 12px 10px; }
   .form-bottom { flex-direction: column-reverse; align-items: stretch; }
   .form-bottom p { max-width: none; text-align: center; }
